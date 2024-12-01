@@ -1,7 +1,7 @@
 import unittest
 
-from Day1HistorianHysteria import Day1HistorianHysteria
-from SolverTestBase import SolverTestBase
+from Solvers.Day1HistorianHysteria import Day1HistorianHysteria
+from Tests.SolverTestBase import SolverTestBase
 
 
 class Day1HistorianHysteriaTest(SolverTestBase):

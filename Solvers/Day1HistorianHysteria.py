@@ -1,4 +1,4 @@
-from Solver import Solver
+from Solvers.Solver import Solver
 
 
 class Day1HistorianHysteria(Solver):

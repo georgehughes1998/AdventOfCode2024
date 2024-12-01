@@ -3,7 +3,7 @@ import re
 import unittest
 
 from Solution import Solution
-from Solver import Solver
+from Solvers.Solver import Solver
 
 
 def _readInputFile(filepath) -> list[str]:
