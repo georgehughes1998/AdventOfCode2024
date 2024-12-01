@@ -11,6 +11,7 @@ def _readInputFile(filepath) -> list[str]:
         with open(filepath) as inputFile:
             lines = [l.strip("\n") for l in inputFile.readlines()]
     except FileNotFoundError:
+        print(f"File not found : {filepath}")
         lines = []
     return lines
 
@@ -20,6 +21,7 @@ def _readSolutionFile(filepath) -> int:
         with open(filepath) as inputFile:
             expected = inputFile.read()
     except FileNotFoundError:
+        print(f"File not found : {filepath}")
         expected = ""
     return int(expected)
 
@@ -47,21 +49,21 @@ class SolverTestBase(unittest.TestCase):
         return _readInputFile(filepath)
 
     def setUp(self):
+        if self.solverClass.__name__ == "Solver":
+            self.skipTest("Skipping base class")
+
         self.solver:Solver = self.solverClass()
-        self.puzzleInputPart1Examples: list[Solution] = self._readDataExample(1)
-        self.puzzleInputReal: list[str] = self._readDataReal()
-        self.puzzleInputPart2Examples: list[Solution] = self._readDataExample(2)
 
     def test_Part1Examples(self):
-        for s in self.puzzleInputPart1Examples:
+        for s in self._readDataExample(1):
             self.assertEqual(s.ExpectedResult ,self.solver.solvePart1(s.Input))
 
     def test_Part1Real(self):
-        print(self.solverClass.__name__, "Part 1", self.solver.solvePart1(self.puzzleInputReal))
+        print(self.solverClass.__name__, "Part 1", self.solver.solvePart1(self._readDataReal()))
 
     def test_Part2Examples(self):
-        for s in self.puzzleInputPart2Examples:
+        for s in self._readDataExample(2):
             self.assertEqual(s.ExpectedResult ,self.solver.solvePart2(s.Input))
 
     def test_Part2Real(self):
-        print(self.solverClass.__name__, "Part 2", self.solver.solvePart2(self.puzzleInputReal))
+        print(self.solverClass.__name__, "Part 2", self.solver.solvePart2(self._readDataReal()))
