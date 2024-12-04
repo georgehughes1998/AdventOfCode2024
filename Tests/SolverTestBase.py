@@ -1,9 +1,12 @@
 import os
 import re
 import unittest
+import unittest.util
 
 from Solution import Solution
 from Solvers.Solver import Solver
+
+unittest.util._MAX_LENGTH = 2000
 
 
 def _readInputFile(filepath) -> list[str]:
