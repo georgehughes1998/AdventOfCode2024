@@ -1,6 +1,7 @@
+import json
 import os
+import pathlib
 import re
-import unittest
 import unittest.util
 
 from Solution import Solution
@@ -10,22 +11,13 @@ unittest.util._MAX_LENGTH = 2000
 
 
 def _readInputFile(filepath) -> list[str]:
-    try:
-        with open(filepath) as inputFile:
-            lines = [l.strip("\n") for l in inputFile.readlines()]
-    except FileNotFoundError:
-        print(f"File not found : {filepath}")
-        lines = []
+    with open(filepath) as inputFile:
+        lines = [l.strip("\n") for l in inputFile.readlines()]
     return lines
 
-
 def _readSolutionFile(filepath) -> int:
-    try:
-        with open(filepath) as inputFile:
-            expected = inputFile.read()
-    except FileNotFoundError:
-        print(f"File not found : {filepath}")
-        expected = 0
+    with open(filepath) as inputFile:
+        expected = inputFile.read()
     return int(expected)
 
 
@@ -57,6 +49,20 @@ class SolverTestBase(unittest.TestCase):
         filepath = f"InputData/Real/{self.solverClass.__name__}.txt"
         return _readInputFile(filepath)
 
+    def _writeOutputData(self, resultPart1: int, resultPart2: int):
+        output_path = "Output/output.json"
+        pathlib.Path(os.path.split(output_path)[0]).mkdir(exist_ok=True)
+
+        if not os.path.exists(output_path):
+            with open(output_path, "w") as output_file:
+                output_file.write("{}")
+
+        with open(output_path, "r") as output_file:
+            structure = json.loads(output_file.read())
+        structure |= {self.solverClass.__name__: {"1": resultPart1, "2": resultPart2}}
+        with open(output_path, "w") as output_file:
+            output_file.write(json.dumps(structure, indent=2))
+
     def setUp(self):
         if self.solverClass.__name__ == "Solver":
             self.skipTest("Skipping base class")
@@ -65,14 +71,12 @@ class SolverTestBase(unittest.TestCase):
 
     def test_Part1Examples(self):
         for s in self._readDataExample(1):
-            self.assertEqual(s.ExpectedResult ,self.solver.solvePart1(s.Input))
-
-    def test_Part1Real(self):
-        print(self.solverClass.__name__, "Part 1", self.solver.solvePart1(self._readDataReal()))
+            self.assertEqual(s.ExpectedResult, self.solver.solvePart1(s.Input))
 
     def test_Part2Examples(self):
         for s in self._readDataExample(2):
-            self.assertEqual(s.ExpectedResult ,self.solver.solvePart2(s.Input))
+            self.assertEqual(s.ExpectedResult, self.solver.solvePart2(s.Input))
 
-    def test_Part2Real(self):
-        print(self.solverClass.__name__, "Part 2", self.solver.solvePart2(self._readDataReal()))
+    def test_Real(self):
+        self._writeOutputData(self.solver.solvePart1(self._readDataReal()),
+                              self.solver.solvePart2(self._readDataReal()))
