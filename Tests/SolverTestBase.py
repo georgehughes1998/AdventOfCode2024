@@ -25,7 +25,7 @@ def _readSolutionFile(filepath) -> int:
             expected = inputFile.read()
     except FileNotFoundError:
         print(f"File not found : {filepath}")
-        expected = ""
+        expected = 0
     return int(expected)
 
 
@@ -33,14 +33,20 @@ class SolverTestBase(unittest.TestCase):
     solverClass = Solver
 
     def _readDataExample(self, part: int) -> list[Solution]:
-        examples_dir = "InputData/Examples/"
+        examples_dir = f"InputData/Examples/{self.solverClass.__name__}/"
         files = os.listdir(examples_dir)
 
-        inputFilenamePattern = re.compile(rf"{self.solverClass.__name__}Part{part}Example(?P<Number>\d+).txt")
-        solutionFilenamePattern = re.compile(rf"{self.solverClass.__name__}Part{part}Example(?P<Number>\d+)Solution.txt")
+        inputFilenamePattern = re.compile(rf"Part{part}-(?P<Number>\d+).txt")
+        solutionFilenamePattern = re.compile(rf"Part{part}-(?P<Number>\d+)A.txt")
 
         inputsFiles = [f for f in files if inputFilenamePattern.search(f)]
         solutionsFiles = [f for f in files if solutionFilenamePattern.search(f)]
+
+        if not inputsFiles:
+            raise FileNotFoundError(f"No examples found for {self.solverClass.__name__}")
+
+        if len(inputsFiles) != len(solutionsFiles):
+            raise FileNotFoundError(f"Examples and solutions don't match")
 
         inputsDict = {inputFilenamePattern.search(f).group("Number") : _readInputFile(examples_dir + f) for f in inputsFiles}
         solutionsDict = {solutionFilenamePattern.search(f).group("Number"): _readSolutionFile(examples_dir + f) for f in solutionsFiles}
@@ -48,7 +54,7 @@ class SolverTestBase(unittest.TestCase):
         return [Solution(Input=inputsDict[i], ExpectedResult=solutionsDict[i]) for i in inputsDict]
 
     def _readDataReal(self) -> list[str]:
-        filepath = f"InputData/Real/{self.solverClass.__name__}Real.txt"
+        filepath = f"InputData/Real/{self.solverClass.__name__}.txt"
         return _readInputFile(filepath)
 
     def setUp(self):
