@@ -3,11 +3,12 @@ import os
 import pathlib
 import re
 import unittest.util
+from json import JSONDecodeError
 
 from Solution import Solution
 from Solvers.Solver import Solver
 
-unittest.util._MAX_LENGTH = 2000
+unittest.util._MAX_LENGTH = 4000
 
 
 def _readInputFile(filepath) -> list[str]:
@@ -58,7 +59,10 @@ class SolverTestBase(unittest.TestCase):
                 output_file.write("{}")
 
         with open(output_path, "r") as output_file:
-            structure = json.loads(output_file.read())
+            try:
+                structure = json.loads(output_file.read())
+            except JSONDecodeError:
+                structure = dict()
         structure |= {self.solverClass.__name__: {"1": resultPart1, "2": resultPart2}}
         with open(output_path, "w") as output_file:
             output_file.write(json.dumps(structure, indent=2))
