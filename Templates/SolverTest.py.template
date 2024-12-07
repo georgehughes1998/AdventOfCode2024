@@ -1,0 +1,11 @@
+import unittest
+
+from Solvers.{0} import {0}
+from Tests.SolverTestBase import SolverTestBase
+
+
+class {0}Test(SolverTestBase):
+    solverClass = {0}
+
+if __name__ == '__main__':
+    unittest.main()

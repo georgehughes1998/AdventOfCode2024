@@ -1,0 +1,8 @@
+
+
+class {0}:
+    def solvePart1(self, input_value: list[str]) -> int:
+        return 0
+
+    def solvePart2(self, input_value: list[str]) -> int:
+        return 0
