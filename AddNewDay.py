@@ -22,8 +22,9 @@ if __name__ == '__main__':
         solver_test_file.write(solver_test_content)
 
     pathlib.Path(f"InputData/Real/{day_number_and_name}.txt").touch()
-    pathlib.Path(f"InputData/Examples/{day_number_and_name}").mkdir()
+    pathlib.Path(f"InputData/Examples/{day_number_and_name}").mkdir(exist_ok=True)
     for part in [1,2]:
         for exemple in [1]:
             pathlib.Path(f"InputData/Examples/{day_number_and_name}/Part{part}-{exemple}.txt").touch()
-            pathlib.Path(f"InputData/Examples/{day_number_and_name}/Part{part}-{exemple}A.txt").touch()
+            with open(f"InputData/Examples/{day_number_and_name}/Part{part}-{exemple}A.txt", "w") as answer_file:
+                answer_file.write("0")
