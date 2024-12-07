@@ -75,11 +75,13 @@ class SolverTestBase(unittest.TestCase):
 
     def test_Part1Examples(self):
         for s in self._readDataExample(1):
-            self.assertEqual(s.ExpectedResult, self.solver.solvePart1(s.Input))
+            with self.subTest(s=s):
+                self.assertEqual(s.ExpectedResult, self.solver.solvePart1(s.Input))
 
     def test_Part2Examples(self):
         for s in self._readDataExample(2):
-            self.assertEqual(s.ExpectedResult, self.solver.solvePart2(s.Input))
+            with self.subTest(s=s):
+                self.assertEqual(s.ExpectedResult, self.solver.solvePart2(s.Input))
 
     def test_Real(self):
         self._writeOutputData(self.solver.solvePart1(self._readDataReal()),
