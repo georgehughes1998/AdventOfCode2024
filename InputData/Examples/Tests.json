@@ -1,0 +1,323 @@
+{
+  "Day10HoofIt": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part1-1.txt",
+        "answer": 2
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part1-2.txt",
+        "answer": 4
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part1-3.txt",
+        "answer": 3
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part1-4.txt",
+        "answer": 36
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part2-1.txt",
+        "answer": 3
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part2-2.txt",
+        "answer": 13
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part2-3.txt",
+        "answer": 227
+      },
+      {
+        "filename": "InputData/Examples/Day10HoofIt/Part2-4.txt",
+        "answer": 81
+      }
+    ]
+  },
+  "Day11PlutonianPebbles": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day11PlutonianPebbles/Part1-1.txt",
+        "answer": 55312
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day11PlutonianPebbles/Part2-1.txt",
+        "answer": 65601038650482
+      }
+    ]
+  },
+  "Day12GardenGroups": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part1-1.txt",
+        "answer": 140
+      },
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part1-2.txt",
+        "answer": 1930
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part2-1.txt",
+        "answer": 236
+      },
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part2-2.txt",
+        "answer": 368
+      },
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part2-3.txt",
+        "answer": 1206
+      },
+      {
+        "filename": "InputData/Examples/Day12GardenGroups/Part2-4.txt",
+        "answer": 80
+      }
+    ]
+  },
+  "Day13ClawContraption": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day13ClawContraption/Part1-1.txt",
+        "answer": 480
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day13ClawContraption/Part2-1.txt",
+        "answer": 875318608908
+      }
+    ]
+  },
+  "Day14RestroomRedoubt": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day14RestroomRedoubt/Part1-1.txt",
+        "answer": 12
+      }
+    ],
+    "Part2": []
+  },
+  "Day15WarehouseWoes": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day15WarehouseWoes/Part1-1.txt",
+        "answer": 10092
+      },
+      {
+        "filename": "InputData/Examples/Day15WarehouseWoes/Part1-2.txt",
+        "answer": 2028
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day15WarehouseWoes/Part2-1.txt",
+        "answer": 9021
+      }
+    ]
+  },
+  "Day16ReindeerMaze": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day16ReindeerMaze/Part1-1.txt",
+        "answer": 7036
+      },
+      {
+        "filename": "InputData/Examples/Day16ReindeerMaze/Part1-2.txt",
+        "answer": 11048
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day16ReindeerMaze/Part2-1.txt",
+        "answer": 45
+      },
+      {
+        "filename": "InputData/Examples/Day16ReindeerMaze/Part2-2.txt",
+        "answer": 64
+      }
+    ]
+  },
+  "Day1HistorianHysteria": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day1HistorianHysteria/Part1-1.txt",
+        "answer": 11
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day1HistorianHysteria/Part2-1.txt",
+        "answer": 31
+      }
+    ]
+  },
+  "Day2RedNosedReports": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day2RedNosedReports/Part1-1.txt",
+        "answer": 2
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day2RedNosedReports/Part2-1.txt",
+        "answer": 4
+      }
+    ]
+  },
+  "Day3MullItOver": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day3MullItOver/Part1-1.txt",
+        "answer": 161
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day3MullItOver/Part2-1.txt",
+        "answer": 48
+      }
+    ]
+  },
+  "Day4CeresSearch": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day4CeresSearch/Part1-1.txt",
+        "answer": 18
+      },
+      {
+        "filename": "InputData/Examples/Day4CeresSearch/Part1-2.txt",
+        "answer": 3
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day4CeresSearch/Part2-1.txt",
+        "answer": 9
+      },
+      {
+        "filename": "InputData/Examples/Day4CeresSearch/Part2-2.txt",
+        "answer": 1
+      }
+    ]
+  },
+  "Day5PrintQueue": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day5PrintQueue/Part1-1.txt",
+        "answer": 143
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day5PrintQueue/Part2-1.txt",
+        "answer": 123
+      },
+      {
+        "filename": "InputData/Examples/Day5PrintQueue/Part2-2.txt",
+        "answer": 75
+      }
+    ]
+  },
+  "Day6GuardGallivant": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part1-1.txt",
+        "answer": 41
+      },
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part1-2.txt",
+        "answer": 3
+      },
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part1-3.txt",
+        "answer": 4
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part2-1.txt",
+        "answer": 6
+      },
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part2-2.txt",
+        "answer": 0
+      },
+      {
+        "filename": "InputData/Examples/Day6GuardGallivant/Part2-3.txt",
+        "answer": 1
+      }
+    ]
+  },
+  "Day7BridgeRepair": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day7BridgeRepair/Part1-1.txt",
+        "answer": 3749
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day7BridgeRepair/Part2-1.txt",
+        "answer": 11387
+      }
+    ]
+  },
+  "Day8ResonantCollinearity": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day8ResonantCollinearity/Part1-1.txt",
+        "answer": 14
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day8ResonantCollinearity/Part2-1.txt",
+        "answer": 9
+      },
+      {
+        "filename": "InputData/Examples/Day8ResonantCollinearity/Part2-2.txt",
+        "answer": 34
+      }
+    ]
+  },
+  "Day9DiskFragmenter": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day9DiskFragmenter/Part1-1.txt",
+        "answer": 1928
+      },
+      {
+        "filename": "InputData/Examples/Day9DiskFragmenter/Part1-2.txt",
+        "answer": 60
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day9DiskFragmenter/Part2-1.txt",
+        "answer": 0
+      }
+    ]
+  },
+  "Day17ChronospatialComputer": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day17ChronospatialComputer/Part1-1.txt",
+        "answer": "4,6,3,5,6,3,5,2,1,0"
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day17ChronospatialComputer/Part2-1.txt",
+        "answer": 117440
+      }
+    ]
+  }
+}

@@ -8,7 +8,7 @@ from json import JSONDecodeError
 from Solution import Solution
 from Solvers.Solver import Solver
 
-unittest.util._MAX_LENGTH = 4000
+unittest.util._MAX_LENGTH = 60000
 
 
 def _readInputFile(filepath) -> list[str]:
@@ -26,25 +26,12 @@ class SolverTestBase(unittest.TestCase):
     solverClass = Solver
 
     def _readDataExample(self, part: int) -> list[Solution]:
-        examples_dir = f"InputData/Examples/{self.solverClass.__name__}/"
-        files = os.listdir(examples_dir)
-
-        inputFilenamePattern = re.compile(rf"Part{part}-(?P<Number>\d+).txt")
-        solutionFilenamePattern = re.compile(rf"Part{part}-(?P<Number>\d+)A.txt")
-
-        inputsFiles = [f for f in files if inputFilenamePattern.search(f)]
-        solutionsFiles = [f for f in files if solutionFilenamePattern.search(f)]
-
-        if not inputsFiles:
-            raise FileNotFoundError(f"No examples found for {self.solverClass.__name__}")
-
-        if len(inputsFiles) != len(solutionsFiles):
-            raise FileNotFoundError(f"Examples and solutions don't match")
-
-        inputsDict = {inputFilenamePattern.search(f).group("Number") : _readInputFile(examples_dir + f) for f in inputsFiles}
-        solutionsDict = {solutionFilenamePattern.search(f).group("Number"): _readSolutionFile(examples_dir + f) for f in solutionsFiles}
-
-        return [Solution(Input=inputsDict[i], ExpectedResult=solutionsDict[i]) for i in inputsDict]
+        examples_json_path = "InputData/Examples/Tests.json"
+        with open(examples_json_path) as f:
+            examples_json = json.loads(f.read())
+        
+        return [Solution(Input=_readInputFile(example["filename"]), ExpectedResult=example["answer"]) 
+         for example in examples_json[self.solverClass.__name__][f"Part{part}"]]
 
     def _readDataReal(self) -> list[str]:
         filepath = f"InputData/Real/{self.solverClass.__name__}.txt"

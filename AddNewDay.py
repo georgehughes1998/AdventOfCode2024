@@ -1,5 +1,6 @@
 import argparse
 import getopt
+import json
 import os
 import pathlib
 import sys
@@ -26,5 +27,10 @@ if __name__ == '__main__':
     for part in [1,2]:
         for exemple in [1]:
             pathlib.Path(f"InputData/Examples/{day_number_and_name}/Part{part}-{exemple}.txt").touch()
-            with open(f"InputData/Examples/{day_number_and_name}/Part{part}-{exemple}A.txt", "w") as answer_file:
-                answer_file.write("0")
+
+    with open("InputData/Examples/Tests.json", "r") as input_data_json_file:
+        input_data_json = json.loads(input_data_json_file.read())
+    input_data_json[day_number_and_name] = {
+        f"Part{n}": [{"filename": f"InputData/Examples/{day_number_and_name}/Part{n}-1.txt","answer": None}] for n in [1, 2]}
+    with open("InputData/Examples/Tests.json", "w") as input_data_json_file:
+         input_data_json_file.write(json.dumps(input_data_json, indent=2))
