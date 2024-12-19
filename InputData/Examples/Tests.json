@@ -319,5 +319,33 @@
         "answer": 117440
       }
     ]
+  },
+  "Day18RAMRun": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day18RAMRun/Part1-1.txt",
+        "answer": 22
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day18RAMRun/Part2-1.txt",
+        "answer": "6,1"
+      }
+    ]
+  },
+  "Day19LinenLayout": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day19LinenLayout/Part1-1.txt",
+        "answer": 6
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day19LinenLayout/Part2-1.txt",
+        "answer": 16
+      }
+    ]
   }
 }
