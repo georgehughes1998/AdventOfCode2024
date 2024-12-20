@@ -347,5 +347,19 @@
         "answer": 16
       }
     ]
+  },
+  "Day20RaceCondition": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day20RaceCondition/Part1-1.txt",
+        "answer": 2
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day20RaceCondition/Part1-1.txt",
+        "answer": 285
+      }
+    ]
   }
 }
