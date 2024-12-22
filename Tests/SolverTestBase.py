@@ -8,7 +8,7 @@ from json import JSONDecodeError
 from Solution import Solution
 from Solvers.Solver import Solver
 
-unittest.util._MAX_LENGTH = 60000
+unittest.util._MAX_LENGTH = 1000000
 
 
 def _readInputFile(filepath) -> list[str]:

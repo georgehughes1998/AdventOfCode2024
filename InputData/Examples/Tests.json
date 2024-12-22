@@ -361,5 +361,33 @@
         "answer": 285
       }
     ]
+  },
+  "Day21KeypadConundrum": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day21KeypadConundrum/Part1-1.txt",
+        "answer": 126384
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day21KeypadConundrum/Part2-1.txt",
+        "answer": 0
+      }
+    ]
+  },
+  "Day22MonkeyMarket": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day22MonkeyMarket/Part1-1.txt",
+        "answer": 37327623
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day22MonkeyMarket/Part2-1.txt",
+        "answer": 23
+      }
+    ]
   }
 }
