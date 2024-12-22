@@ -37,7 +37,7 @@ class SolverTestBase(unittest.TestCase):
         filepath = f"InputData/Real/{self.solverClass.__name__}.txt"
         return _readInputFile(filepath)
 
-    def _writeOutputData(self, resultPart1: int, resultPart2: int):
+    def _writeOutputData(self, part: int, result: int|str):
         output_path = "Output/output.json"
         pathlib.Path(os.path.split(output_path)[0]).mkdir(exist_ok=True)
 
@@ -50,9 +50,15 @@ class SolverTestBase(unittest.TestCase):
                 structure = json.loads(output_file.read())
             except JSONDecodeError:
                 structure = dict()
-        structure |= {self.solverClass.__name__: {"1": resultPart1, "2": resultPart2}}
+
+        if not self.solverClass.__name__ in structure:
+            structure[self.solverClass.__name__] = {}
+        structure[self.solverClass.__name__][part] = result
+
+        json_string = json.dumps(structure, indent=2)
+
         with open(output_path, "w") as output_file:
-            output_file.write(json.dumps(structure, indent=2))
+            output_file.write(json_string)
 
     def setUp(self):
         if self.solverClass.__name__ == "Solver":
@@ -70,6 +76,8 @@ class SolverTestBase(unittest.TestCase):
             with self.subTest(s=s):
                 self.assertEqual(s.ExpectedResult, self.solver.solvePart2(s.Input))
 
-    def test_Real(self):
-        self._writeOutputData(self.solver.solvePart1(self._readDataReal()),
-                              self.solver.solvePart2(self._readDataReal()))
+    def test_RealPart1(self):
+        self._writeOutputData(1, self.solver.solvePart1(self._readDataReal()))
+
+    def test_RealPart2(self):
+        self._writeOutputData(2, self.solver.solvePart2(self._readDataReal()))
