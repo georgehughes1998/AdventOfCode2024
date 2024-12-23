@@ -389,5 +389,19 @@
         "answer": 23
       }
     ]
+  },
+  "Day23LANParty": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day23LANParty/Part1-1.txt",
+        "answer": 7
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day23LANParty/Part2-1.txt",
+        "answer": "co,de,ka,ta"
+      }
+    ]
   }
 }

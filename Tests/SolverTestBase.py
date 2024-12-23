@@ -53,7 +53,7 @@ class SolverTestBase(unittest.TestCase):
 
         if not self.solverClass.__name__ in structure:
             structure[self.solverClass.__name__] = {}
-        structure[self.solverClass.__name__][part] = result
+        structure[self.solverClass.__name__][str(part)] = result
 
         json_string = json.dumps(structure, indent=2)
 
