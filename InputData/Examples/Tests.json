@@ -403,5 +403,37 @@
         "answer": "co,de,ka,ta"
       }
     ]
+  },
+  "Day24CrossedWires": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day24CrossedWires/Part1-1.txt",
+        "answer": 4
+      },
+      {
+        "filename": "InputData/Examples/Day24CrossedWires/Part1-2.txt",
+        "answer": 2024
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day24CrossedWires/Part2-1.txt",
+        "answer": ""
+      }
+    ]
+  },
+  "Day25CodeChronicle": {
+    "Part1": [
+      {
+        "filename": "InputData/Examples/Day25CodeChronicle/Part1-1.txt",
+        "answer": 3
+      }
+    ],
+    "Part2": [
+      {
+        "filename": "InputData/Examples/Day25CodeChronicle/Part2-1.txt",
+        "answer": null
+      }
+    ]
   }
 }
